@@ -7,6 +7,7 @@ request.get('https://sytantris.github.io/http-examples/future.jpg')
        })
        .on('response', function (response) {
          console.log('Response Status Code: ', response.statusCode);
+         console.log('Content type: ', response.headers['content-type']);
          console.log('Downloading image...');
        })
        .on('end', function () {
